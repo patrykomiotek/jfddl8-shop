@@ -1,15 +1,23 @@
 import React, { Component } from 'react'
 
-import Product from '../components/Product';
+import Product from '../components/Product'
+
+const products = [
+  { name: "One", description: 'Super produkt', price: 123 },
+  { name: "Two", description: 'Super produkt2', price: 332 },
+  { name: "Three", description: 'Super produkt3', price: 321 }
+]
 
 class ProductsList extends Component {
 
     state = {
-      products: [
-        { name: "One", description: 'Super produkt', price: 123 },
-        { name: "Two", description: 'Super produkt2', price: 332 },
-        { name: "Three", description: 'Super produkt3', price: 321 }
-      ]
+      products: []
+    }
+
+    componentDidMount() {
+      this.setState({
+        products: products
+      })
     }
 
     render () {
