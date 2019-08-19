@@ -1,3 +1,5 @@
+import { PRODUCTS_FETCH } from './constants'
+
 const INITIAL_STATE = {
   products: [],
   product: {},
@@ -12,7 +14,7 @@ const products = [
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case 'PRODUCTS/FETCH':
+    case PRODUCTS_FETCH:
       return {
         ...state,
         products: products,
