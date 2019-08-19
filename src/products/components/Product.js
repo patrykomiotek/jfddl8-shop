@@ -2,9 +2,9 @@ import React from 'react'
 
 const Product = props => (
   <div>
-    <p>{props.name}</p>
-    <p>{props.description}</p>
-    <p>{props.price}</p>
+    <p>{props.data.name}</p>
+    <p>{props.data.description}</p>
+    <p>{props.data.price}</p>
   </div>
 )
 
