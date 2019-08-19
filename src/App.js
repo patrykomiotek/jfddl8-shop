@@ -7,7 +7,7 @@ import ProductsList from './products/containers/ProductsList'
 function App() {
   return (
     <Provider store={store}>
-      <ProductsList />
+      <ProductsList isUser={true} />
     </Provider>
   );
 }
