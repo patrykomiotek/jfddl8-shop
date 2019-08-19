@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import Product from '../components/Product'
 import { fetchProducts } from '../actions'
+import { addProduct } from '../../basket/actions'
 
 const mapStateToProps = (state, ownProps) => ({
   myProducts: state.products.products,
@@ -10,7 +11,8 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchProducts: () => dispatch(fetchProducts())
+  fetchProducts: () => dispatch(fetchProducts()),
+  addProduct: (product) => dispatch(addProduct(product))
 })
 
 class ProductsList extends Component {
@@ -23,7 +25,7 @@ class ProductsList extends Component {
       return (
         <React.Fragment>
           {this.props.myProducts.map((product, index) => (
-            <Product key={`prod-${index}`} data={product} />
+            <Product key={`prod-${index}`} data={product} addHandler={this.props.addProduct} />
           ))}
         </React.Fragment>
       )
