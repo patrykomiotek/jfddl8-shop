@@ -15,6 +15,12 @@ const mapDispatchToProps = dispatch => ({
   addProduct: (product) => dispatch(addProduct(product))
 })
 
+// const mapDispatchToProps = {
+//   fetchProducts,
+//   addProduct
+// }
+
+
 class ProductsList extends Component {
 
     componentDidMount() {
